@@ -9,7 +9,7 @@ function AvailableMeals() {
     const [httpError, setHttpError] = useState();
 
     useEffect(() => {
-        const fetchMeals = async () => {
+        async function fetchMeals()  {
             const response = await fetch('https://react-http-f7e81-default-rtdb.firebaseio.com/meals.json');
 
             if (!response.ok) {
